@@ -23,7 +23,7 @@ paginate = 10
 disqusShortname = "inoryy"
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-18538959-6"
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
@@ -256,6 +256,11 @@ enableGitInfo = false
   name = "Home"
   url = "#about"
   weight = 1
+  
+[[menu.main]]
+  name = "CV"
+  url = "/files/roman_ring_cv.pdf"
+  weight = 10
 
 #[[menu.main]]
 #  name = "Publications"

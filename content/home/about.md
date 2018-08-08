@@ -30,13 +30,12 @@ weight = 5
 
 # Biography
 
-I have started my career path as a self-taught web developer, specializing with [Symfony](https://symfony.com/) web framework. 
-I have worked on projects of various scale, including online education platforms, 360° virtual tour guides, and fitness planners.  
-During this time I have made numerous contributions the open-source community, both directly to the projects I've relied upon, and releasing my own projects.
+I have started my career path as a self-taught web developer, specializing with Symfony web framework. 
+I have worked on projects of various scale in many different domains such as finance, education and health. During this time I have actively participated in the open-source community, contributing to projects I used, and releasing my own projects for others to use.
 
-Eventually I have decided to pivot my career and take an active part in research and development of a field I am passionate about: artificial intelligence. To fulfill this goal I have had to catch up on missed education, starting from bachelor's degree.
+Eventually I have decided to pivot my career and take an active part in research and development of a field I am very passionate about: artificial intelligence. To fulfill this goal I have had to catch up on missed education, starting from bachelor's degree.
 
-I have decided to pursue an undergraduate degree in Mathematical Statistics, complementing practical skills with strong theoretical foundation.
-This summer I have defended the bachelor's thesis and am confident I have made the right choice.
+I have opted to pursue an undergraduate degree in Mathematical Statistics, complementing my programming skills with strong mathematical foundation.  
+In summer of 2018 I have successfully defended my [bachelor's thesis](https://github.com/inoryy/bsc-thesis).
 
-With solid mathematical background I can now fill in the blanks in programming skills while working on a research-focused MSc thesis.
+With solid theoretical background I can now fill in the blanks in my computer science knowledge, while working on a research-focused masters thesis.
