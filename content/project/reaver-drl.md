@@ -3,10 +3,10 @@
 date = 2018-01-05
 
 # Project title.
-title = "Reaver: StarCraft II Deep Reinforcement Learning Agent"
+title = "Reaver: StarCraft II Deep Reinforcement Learning"
 
 # Project summary to display on homepage.
-summary = "Modular DRL framework with a focus on StarCraft II. Created with performance, extensibility, and reproducibility in mind.</br>Works with Gym, Atari, and MuJoCo as well."
+summary = "Modular DRL framework with a focus on StarCraft II, following in DeepMind's footsteps, replicating results. Created with performance, extensibility, and reproducibility in mind.</br>Works with Gym, Atari, and MuJoCo as well."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
 image_preview = "reaver.png"
