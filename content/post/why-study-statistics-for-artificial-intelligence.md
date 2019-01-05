@@ -1,7 +1,7 @@
 +++
 title = "Why I Majored in Statistics for a Career in Artificial Intelligence"
 
-date = 2018-01-05
+date = 2019-01-05
 #lastmod = 2018-01-13T00:00:00
 draft = false
 
