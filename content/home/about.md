@@ -36,6 +36,6 @@ I have worked on projects of various scale in many different domains such as fin
 Eventually I have decided to pivot my career and take an active part in research and development of a field I am very passionate about: artificial intelligence. To fulfill this goal I have had to catch up on missed education, starting from bachelor's degree.
 
 I have opted to pursue an undergraduate degree in Mathematical Statistics, complementing my programming skills with strong mathematical foundation.  
-In summer of 2018 I have successfully defended my [bachelor's thesis](https://github.com/inoryy/bsc-thesis).
+In the summer of 2018 I have successfully defended my [bachelor's thesis](/files/ring_roman_bsc.pdf), replicating DeepMind's architecture and results in the StarCraft II environment.
 
-With solid theoretical background I can now fill in the blanks in my computer science knowledge, while working on a research-focused masters thesis.
+With solid theoretical background I am now filling in the blanks in my computer science knowledge, while working on a research-focused masters thesis.

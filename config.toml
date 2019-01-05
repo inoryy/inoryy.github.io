@@ -10,7 +10,7 @@ title = "Roman Ring"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2018"
+copyright = "&copy; 2018--2019"
 
 theme = "academic"
 enableEmoji = true
@@ -71,7 +71,7 @@ enableGitInfo = false
   telegram = ""
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
-  keybase = ""
+  keybase = "inoryy"
 
   # Discussion link (e.g. link to a forum, mailing list, or chat).
   #   Uncomment line below to use.
@@ -119,7 +119,7 @@ enableGitInfo = false
 
   # Enable global LaTeX math rendering?
   #   If false, you can enable it locally on a per page basis.
-  math = false
+  math = true
 
   # Highlight.js options
   #   highlight
@@ -229,14 +229,24 @@ enableGitInfo = false
     link = "mailto:inoryy@gmail.com"
 
   [[params.social]]
-    icon = "twitter"
+    icon = "linkedin"
     icon_pack = "fa"
-    link = "//twitter.com/inoryy"
+    link = "//linkedin.com/in/romanring"
 
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
     link = "//github.com/inoryy"
+
+  [[params.social]]
+    icon = "twitter"
+    icon_pack = "fa"
+    link = "//twitter.com/inoryy"
+
+  [[params.social]]
+    icon = "reddit"
+    icon_pack = "fa"
+    link = "//reddit.com/u/inori"
 
   [[params.social]]
     icon = "google-scholar"
@@ -256,31 +266,36 @@ enableGitInfo = false
   name = "Home"
   url = "#about"
   weight = 1
+
+#[[menu.main]]
+#  name = "Posts"
+#  url = "#posts"
+#  weight = 2
+
+[[menu.main]]
+  name = "Projects"
+  url = "#projects"
+  weight = 3
+
+[[menu.main]]
+  name = "Talks"
+  url = "#talks"
+  weight = 4
+
+[[menu.main]]
+  name = "Teaching"
+  url = "#teaching"
+  weight = 5
   
 [[menu.main]]
   name = "CV"
-  url = "/files/roman_ring_cv.pdf"
+  url = "/files/ring_roman_cv.pdf"
   weight = 10
 
 #[[menu.main]]
 #  name = "Publications"
 #  url = "#publications_selected"
 #  weight = 2
-
-#[[menu.main]]
-#  name = "Posts"
-#  url = "#posts"
-#  weight = 3
-
-#[[menu.main]]
-#  name = "Projects"
-#  url = "#projects"
-#  weight = 4
-
-#[[menu.main]]
-#  name = "Teaching"
-#  url = "#teaching"
-#  weight = 5
 
 #[[menu.main]]
 #  name = "Contact"
