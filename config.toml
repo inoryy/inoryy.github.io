@@ -314,3 +314,8 @@ enableGitInfo = false
 # Configure the English version of the website.
 [Languages.en]
   languageCode = "en-us"
+
+[sitemap]
+    changefreq = "weekly"
+    priority = 0.5
+

@@ -1,6 +1,6 @@
 +++
 # Date this page was created.
-date = 2018-01-04
+date = 2019-01-05
 
 # Project title.
 title = "Starter Agent for Coders Strike Back AI Challenge"
