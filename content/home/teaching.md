@@ -17,4 +17,5 @@ weight = 60
 
 Teaching Assistant, University of Tartu:
 
+- LTAT.02.001: Artificial Neural Networks, Spring 2019 
 - MTAT.03.317: Deep Reinforcement Learning, Fall 2018 
