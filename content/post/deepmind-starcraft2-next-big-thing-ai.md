@@ -104,3 +104,9 @@ I also wouldn't be surprised if instead of fully end-to-end approach DeepMind wi
 # Conclusion
 
 Hopefully you're now as excited as I am about the upcoming event. Whether the AI is fully end to end or not and whether they will be able to win vs human experts or not, it is still a massive endeavor and should provide for a good show. And if you'd like to get into developing StarCraft II based AIs yourself, join our [SC2AI community on discord](https://discordapp.com/invite/Emm5Ztz)!
+
+# Updates
+
+Demis Hassabis just announced that the agent will be called **AlphaStar**!
+
+{{< tweet 1088443612763873280 >}}
