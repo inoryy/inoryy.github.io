@@ -69,9 +69,9 @@ Furthermore, the AI is limited in many aspects to match human experiences, e.g. 
 
 # The Next Big Thing in AI
 
-A StarCraft II player might wonder what is special about this if there were relatively good AIs built into the game from release. The AI you encounter in-game acts based on some pre-defined set of rules, which means it can only play as well as the person who programmed it, reacting only to forseen events. This makes the AI inflexible, and easy to exploit, among other things. 
+A StarCraft II player might wonder what is special about this if there were relatively good AIs built into the game from release. The AI you encounter in-game acts based on some pre-defined set of rules, which means it can only play as well as the person who programmed it, reacting only to foreseen events. This makes the AI inflexible, and easy to exploit, among other things. 
 
-In contrast, the AI DeepMind is working on learns the game by itself, essentially from scratch. At each step all it has is the game state it observed, the actions it can take, and some reward stimulus it received for a previous action. In geenral the approach is called reinforcement learning and [here](http://inoryy.com/post/tensorflow2-deep-reinforcement-learning/) I give a brief overview of the field.
+In contrast, the AI DeepMind is working on learns the game by itself, essentially from scratch. At each step all it has is the game state it observed, the actions it can take, and some reward stimulus it received for a previous action. In general the approach is called reinforcement learning and [here](http://inoryy.com/post/tensorflow2-deep-reinforcement-learning/) I give a brief overview of the field.
 
 To get a feel for what it's like for an RL agent to "learn" the game, here is a video of an agent attempting to tackle a set of minigames released by DeepMind. On the left you can see an agent that just started the process and is exploring all the various actions it can take, and on the right is the same agent after a fair bit of such experiments (about 50 million steps on average).
 
