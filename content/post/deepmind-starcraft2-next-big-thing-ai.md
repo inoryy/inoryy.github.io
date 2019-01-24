@@ -14,7 +14,7 @@ summary = "After winning against Go world champion Lee Sedol in 2016, DeepMind h
 
 Couple of days ago out of the blue DeepMind announced a StarCraft II related event, with many of the employees being quite excited about it on twitter. In just a few hours we will see what DeepMind has in store for us, but in the meantime let's take a step back and review how we got here and why it is so important.
 
-{{< tweet 1087743023100903426 >}}
+**Update**: the (amazing) event has finished and DeepMind have released a [very detailed write-up](https://deepmind.com/blog/alphastar-mastering-real-time-strategy-game-starcraft-ii/). See below for my thoughts on the event and the write-up.
 
 # DeepMind
 
@@ -105,8 +105,20 @@ I also wouldn't be surprised if instead of fully end-to-end approach DeepMind wi
 
 Hopefully you're now as excited as I am about the upcoming event. Whether the AI is fully end to end or not and whether they will be able to win vs human experts or not, it is still a massive endeavor and should provide for a good show. And if you'd like to get into developing StarCraft II based AIs yourself, join our [SC2AI community on discord](https://discordapp.com/invite/Emm5Ztz)!
 
-# Updates
+# Post-Event Write-Up
 
-Demis Hassabis just announced that the agent will be called **AlphaStar**!
+The stream was very exciting to watch, both as a player and a researcher. It was funny to see AlphaStar opt for wild strategies and then come out on top. It was also interesting to see it make mistakes such as killing its own units, very AI and human-like behavior at the same time.
 
-{{< tweet 1088443612763873280 >}}
+To me the most impressive was the micro, and not just due to its ability to make split second decisions. The way AlphaStar knew how to pull back damaged stalkers to regenerate shields, the way it pulled its workers when it saw Oracles - really mind boggling that a single end-to-end neural network is capable of such a rich variety of tactical and somewhat long-term decision-making.
+
+However, AlphaStar is still quite far from conquering StarCraft II universe. First, while Mana is no doubt a great player, he is not quite world champion caliber. Second, this is still a single matchup, whereas any human player would be expected to play vs all three races on the same level. Third, I'm not sure how I feel about having players go against a pool of AlphaStar(s) - I think it definitely makes sense to use for training, but during inference I'd prefer to see a single version used throughout the matches. Overall I would say AlphaStar right now is closer to the AlhaGo version that played vs Fan Hui than the one that won vs Lee Sedol.
+
+Seems that I've correctly predicted the match-up and level of play, along with some of the approaches. Specifically, AlphaStar does indeed rely on `imitation learning`, `IMPALA`, and `attention` mechanism, though not quite as described in Relational DRL article. They also indeed use `LSTM`, but I am not so sure with regards to `convolutional` layers - there seems to be a bit of confusion as to what interface they ended up using. I've also briefly mentioned `population based training` - seems that DeepMind uses an advanced variant of it, hopefully we will see an article about it soon.
+
+Of the things I've missed is the [transformer](https://arxiv.org/abs/1706.03762) body, which is a state-of-the-art architecture in machine translation. Very surprised to see it applied in DRL. They also use a relatively novel baseline for the `advantage function` in the PG loss, which they pulled from the [Counterfactual Multi-Agent Policy Gradients](https://www.cs.ox.ac.uk/people/shimon.whiteson/pubs/foersteraaai18.pdf) article. This is noteworthy because for the longest time the value estimate of next state for baseline was the go-to approach of pretty much everybody in DRL.
+
+Finally, they apply [pointer network](https://arxiv.org/abs/1506.03134) to the policy output, most likely as an efficient way to deal with variable length of action arguments. To me the use of `pointer networks` was quite surprising and somewhat ironic - I have actually [written an essay](http://inoryy.com/files/pointer_networks_essay.pdf) on this article and while it was an interesting subject, it never crossed my mind it could be applied in such a way to DRL policies. Although in retrospect I guess it makes sense.
+
+During training they also rely on [self-imitation](http://proceedings.mlr.press/v80/oh18b/oh18b.pdf) and `experience replay`, which is quite interesting - seems they have finally perfected the combination of `actor-critic methods`, which are traditionally seen as `on-policy`, with the benefits of `off-policy` algorithms. Finally, they use [policy distillation](https://arxiv.org/pdf/1511.06295.pdf) which is probably how they were able to fit the final agents into a single machine for inference.
+
+If by now your head is spinning from all the terminology, don't worry - mine is too. The takeaway message is that it took an impressive amount of very advanced approaches to achieve the level of play we have seen today and I am curious to see what happens next.
