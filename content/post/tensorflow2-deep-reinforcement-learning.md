@@ -31,16 +31,16 @@ Let’s quickly verify that everything works as expected:
 ```python
 >>> import tensorflow as tf
 >>> print(tf.__version__)
-1.13.0-dev20190117
+2.0.0-dev20190129
 >>> print(tf.executing_eagerly())
 True
 ```
 
-Don’t worry about the 1.13.x version, just means that it’s an early preview. What’s important to note here is that we’re in eager mode by default!
+Note that we’re now in eager mode by default!
 
 ```python
->>> print(tf.reduce_sum([1, 2, 3, 4, 5]))
-tf.Tensor(15, shape=(), dtype=int32)
+>>> print("1 + 2 + 3 + 4 + 5 =", tf.reduce_sum([1, 2, 3, 4, 5]))
+1 + 2 + 3 + 4 + 5 = tf.Tensor(15, shape=(), dtype=int32)
 ```
 
 If you’re not yet familiar with eager mode, then in essence it means that computation is executed at runtime, rather than through a pre-compiled graph. You can find a good overview in the [TensorFlow documentation](https://www.tensorflow.org/tutorials/eager/eager_basics).
@@ -213,16 +213,15 @@ class A2CAgent:
     def _logits_loss(self, acts_and_advs, logits):
         # a trick to input actions and advantages through same API
         actions, advantages = tf.split(acts_and_advs, 2, axis=-1)
-        # polymorphic CE loss function that supports sparse and weighted options
+        # sparse categorical CE loss obj that supports sample_weight arg on call()
         # from_logits argument ensures transformation into normalized probabilities
-        cross_entropy = kls.CategoricalCrossentropy(from_logits=True)
+        weighted_sparse_ce = kls.SparseCategoricalCrossentropy(from_logits=True)
         # policy loss is defined by policy gradients, weighted by advantages
         # note: we only calculate the loss on the actions we've actually taken
-        # thus under the hood a sparse version of CE loss will be executed
         actions = tf.cast(actions, tf.int32)
-        policy_loss = cross_entropy(actions, logits, sample_weight=advantages)
+        policy_loss = weighted_sparse_ce(actions, logits, sample_weight=advantages)
         # entropy loss can be calculated via CE over itself
-        entropy_loss = cross_entropy(logits, logits)
+        entropy_loss = kls.categorical_crossentropy(logits, logits, from_logits=True)
         # here signs are flipped because optimizer minimizes
         return policy_loss - self.params['entropy']*entropy_loss
 ```
