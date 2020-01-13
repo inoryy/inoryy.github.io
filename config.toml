@@ -10,11 +10,11 @@ title = "Roman Ring"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2018--2019"
+copyright = "&copy; 2018--2020"
 
 theme = "academic"
 enableEmoji = true
-footnotereturnlinkcontents = "<sup>^</sup>"
+footnotereturnlinkcontents = "↑"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 paginate = 10
