@@ -84,8 +84,8 @@ Generally speaking, reinforcement learning is a high-level framework for solving
 An RL `agent` navigates an `environment` by taking `actions` based on some `observations`, receiving `rewards` as a result.
 Most RL algorithms work by maximizing the expected total rewards an agent collects in a `trajectory`, e.g., during one in-game round.
 
-The output of an RL algorithm is a `policy` -- a function from states to actions.
-Valid policy can be as simple as a hard-coded no-op action,
+The output of an RL algorithm is a `policy` -- a function from states to actions.  
+A valid policy can be as simple as a hard-coded no-op action,
 but typically it represents a conditional probability distribution of actions given some state.
 
 ![](https://i.imgur.com/fUcDHVt.png)
@@ -116,7 +116,7 @@ Image via [Mohammadi et al (2018)](https://arxiv.org/abs/1810.04107).</span>
 
 Over the years, several improvements were added to address sample efficiency and stability of the learning process.
 
-First, gradients are weighted with `returns`: discounted sum of future rewards,
+First, gradients are weighted with `returns`: a discounted sum of future rewards,
 which resolves theoretical issues with infinite timesteps,
 and mitigates the `credit assignment problem` -- allocate rewards to the correct actions. 
 
@@ -156,6 +156,11 @@ Somewhat simplistic, it is still a great option to get started. In fact, I often
 First, we create the policy and value estimate NNs under a single model class:
 
 ```python
+import numpy as np
+import tensorflow as tf
+import tensorflow.keras.layers as kl
+
+
 class ProbabilityDistribution(tf.keras.Model):
   def call(self, logits, **kwargs):
     # Sample a random categorical action from the given logits.
@@ -251,6 +256,10 @@ As I have described in the RL section, an agent improves its policy through grad
 In the A2C algorithm, we train on three objectives: improve policy with advantage weighted gradients, maximize the entropy, and minimize value estimate errors.
 
 ```python
+import tensorflow.keras.losses as kls
+import tensorflow.keras.optimizers as ko
+
+
 class A2CAgent:
   def __init__(self, model, lr=7e-3, value_c=0.5, entropy_c=1e-4):
     # Coefficients are used for the loss terms.
@@ -294,7 +303,7 @@ class A2CAgent:
 ```
 
 And we are done with the objective functions!
-Note how compact the code is: there is almost more comment lines than code itself.
+Note how compact the code is: there are almost more comment lines than code itself.
 
 #### The Training Loop
 
@@ -387,15 +396,15 @@ print("%d out of 200" % agent.test(env)) # 200 out of 200
 
 ![](https://thumbs.gfycat.com/SoupyConsciousGrayling-size_restricted.gif)
 
-In the source code I include some additional helpers that print out running episode rewards and losses,
+In the source code, I include some additional helpers that print out running episode rewards and losses,
 along with basic plotter for the rewards history.
 
 ![](https://i.imgur.com/cFwQgPB.png)
 
 ## Static Computational Graph
 
-With all of this eager mode excitement you might wonder if using static graph is even possible anymore.
-Well, of course it is! In fact, it takes just one line!
+With all of this eager mode excitement, you might wonder if using a static graph is even possible anymore.
+Of course, it is! And it takes just one line!
 
 ```python
 with tf.Graph().as_default():
@@ -409,7 +418,7 @@ with tf.Graph().as_default():
   print("%d out of 200" % agent.test(env)) # 200 out of 200
 ```
 
-There is one caveat though: during static graph execution we can not just have Tensors laying around,
+There is one caveat though: during static graph execution, we can not just have Tensors laying around,
 which is why we needed that trick with the separate `ProbabilityDistribution` model definition.
 In fact, while I was looking for a way to execute in static mode,
 I discovered one interesting low-level detail about models built through the Keras API...
@@ -492,8 +501,8 @@ Eager Keras Model: False
 CPU times: user 994 ms, sys: 23.1 ms, total: 1.02 s
 ```
 
-As you can see, eager mode is behind static, and by default our model was indeed executed statically,
-more or less matching the explicitly static execution.
+As you can see, eager mode is behind static, and by default, our model was indeed executed statically,
+almost matching the explicitly static execution.
 
 ## Conclusion
 
