@@ -2,7 +2,7 @@
 title = "Deep Reinforcement Learning With TensorFlow 2.1"
 
 date = 2019-01-20
-lastmod = 2020-01-12
+lastmod = 2020-01-13
 draft = false
 
 authors = []

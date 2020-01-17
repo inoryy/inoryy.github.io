@@ -37,7 +37,8 @@ After five years of work experience, I decided to pivot my career and take an ac
 To fulfill this goal, I had to catch up on missed education, starting with a bachelor’s degree.
 I chose to pursue an undergraduate degree in mathematical statistics to complement my programming skills with a strong mathematical foundation.
 
-In the summer of 2018, I successfully defended my [bachelor’s thesis](/files/ring_roman_bsc.pdf), replicating DeepMind’s preliminary results and architecture with reinforcement learning methods in the [StarCraft II learning environment](https://arxiv.org/abs/1708.04782).
-I continued my education with a master’s in computer science, filling in the blanks in the more theoretical subjects I missed beforehand.
+In the summer of 2018, I successfully defended my [bachelor’s thesis](/files/ring_roman_bsc.pdf),
+replicating DeepMind’s preliminary results and architecture with deep reinforcement learning methods in the [StarCraft II learning environment](https://arxiv.org/abs/1708.04782).
+I continued my education with a master’s in computer science, filling in the blanks in the theory I missed beforehand.
 
 In the summer of 2019, I interned as a research engineer at DeepMind in London, UK; contributing to the [AlphaStar](https://deepmind.com/blog/article/AlphaStar-Grandmaster-level-in-StarCraft-II-using-multi-agent-reinforcement-learning) project, and experimenting with the [JAX](https://github.com/google/jax) library.

@@ -1,5 +1,5 @@
 +++
-title = "DeepMind, StarCraft II, and The Next Big Thing in AI"
+title = "StarCraft II: Next Big Thing in AI"
 
 date = 2019-01-24
 draft = false
@@ -7,6 +7,11 @@ draft = false
 authors = []
 
 tags = []
+
+aliases = [
+  "post/starcraft2-next-big-thing-ai/",
+  "post/deepmind-starcraft2-next-big-thing-ai/"
+]
 
 summary = "After winning against Go world champion Lee Sedol in 2016, DeepMind has announced the  next challenge they will focus on: StarCraft II. Today they are finally ready to unveil *something* at 6PM GMT and with this blog post I want to help both StarCraft players and AI researchers appreciate the scope of what they're about to experience. I will give a brief overview of the challenge, address some of the common misconceptions, and speculate a bit on what we'll see."
 
