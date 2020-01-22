@@ -41,12 +41,12 @@ In fact, Alex Krizhevsky's former colleagues recall that many meetings before th
 
 Now let us travel back to 2015 when ML research article submissions started blowing up across the board,
 including (re-)emergence of many now promising approaches such as generative adversarial learning, deep reinforcement learning,
-meta learning, self-supervised learning, federated learning, neural architecture search, neural differential equations, neural graph networks, and many more.
+meta-learning, self-supervised learning, federated learning, neural architecture search, neural differential equations, neural graph networks, and many more.
 
 ![](https://miro.medium.com/max/770/1*Y-CZdwBP2L_XW1YRLdxt0A.png)
 <span class="source">Image via [Charrez, D. (2019)](https://medium.com/@dcharrezt/neurips-2019-stats-c91346d31c8f).</span>
 
-One could claim that this is just a natural outcome of the AI hype. However, I believe a significant factor was the emergence of second generation of general-purpose
+One could claim that this is just a natural outcome of the AI hype. However, I believe a significant factor was the emergence of the second generation of general-purpose
 ML frameworks such as TensorFlow[^tf] and PyTorch[^pt], along with NVIDIA going all-in on AI. The frameworks that existed before, such as Caffe[^caffe] and Theano[^theano],
 were challenging to work with, and awkward to extend, which slowed down the research and development of novel ideas.
 
@@ -175,7 +175,7 @@ infrastructure for various next-gen ML tools such as debuggers.
 For example, imagine an IDE warning a user that the custom model computation always results in a zero gradient
 without even executing it.
 
-Python has an incredible community built around scientific computing and the S4TF team have explicitly
+Python has an incredible community built around scientific computing and the S4TF team has explicitly
 taken the time to embrace it via interoperability.
 
 ```swift
@@ -190,7 +190,7 @@ plt.show() // Will show the sin plot, just as you would expect.
 ```
 
 This project is a significant undertaking and still has some ways to go before being ready for production.
-However, this is a great time to give it a try for both engineers and researchers and potentially contribute to its development.
+However, this is a great time to give it a try for both engineers and researchers and potentially contribute to its development.  
 Work on S4TF has already produced interesting scientific advancements at the intersection of programming language and auto-diff theory[^diff-curry].
 
 One thing that especially stands out for me about S4TF is [their approach to community outreach](https://github.com/tensorflow/community/blob/master/sigs/swift/CHARTER.md).
@@ -258,7 +258,7 @@ They have even inspired recent development of similar functionality in both [Ten
 and [PyTorch](https://twitter.com/apaszke/status/1219886260296261632).
 
 For the time being, JAX authors seem to be sticking to their core competency when it comes to developing new features.
-Of course, a reasonable approach but is also the cause for one of it's main drawbacks:
+Of course, a reasonable approach but is also the cause for one of its main drawbacks:
 lack of built-in neural network components, aside from the proof-of-concept [Stax](https://github.com/google/jax/blob/master/jax/experimental/stax.py). 
 
 Adding higher-level features is something where end-users can potentially step in and contribute, and given JAX's solid foundation,
@@ -300,10 +300,10 @@ class Linear(nn.Module):
 ```
 
 Even though some might prefer a singular way, endorsed by core developers,
-having diversity of methods is a good indicator that the technology is sound.
+having a diversity of methods is a good indicator that the technology is sound.
 
 There are also some directions in research where JAX features especially shine.
-For example, in meta-learning, one common approach to train the meta-learner is by computing the gradients of the inputs.
+For example, in meta-learning, one common approach to training a meta-learner is by computing the gradients of the inputs.
 An alternative method for computing gradients -- forward-mode auto-differentiation -- is necessary to solve this task efficiently,
 which is supported out-of-the-box in JAX but is either non-existent or an experimental feature in other libraries.
 
