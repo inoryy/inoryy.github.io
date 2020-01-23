@@ -311,8 +311,8 @@ JAX is perhaps more polished and production-ready than its S4TF counter-part and
 rely on it, such as Reformer -- a memory-efficient Transformer model capable of handling context windows of a million words while fitting on a consumer GPU[^reformer],
 and Neural Tangents -- a library for complex neural networks of infinite width[^neural-tangents].
 
-The library is further embraced by the broader scientific computing community, used for works in molecular dynamics[^jax-md]
-and probabilistic programming[^numpyro], among others.
+The library is further embraced by the broader scientific computing community, used for works in molecular dynamics[^jax-md],
+probabilistic programming[^numpyro], and constrained optimization[^fax], among others.
 
 To get started with JAX and for further reading, please review the following:
 
@@ -395,3 +395,5 @@ limitations more than on your ideas, then maybe give them a try!
 [^numpyro]: Phan, D., Pradhan, N., & Jankowiak, M. (2019). Composable Effects for Flexible and Accelerated Probabilistic Programming in NumPyro.
 
 [^neural-tangents]: Novak, R., Xiao, L., Hron, J., Lee, J., Alemi, A., Sohl-dickstein, J., & Schoenholz, S. (2020). Neural Tangents: Fast and Easy Infinite Neural Networks in Python. In International Conference on Learning Representations.
+
+[^fax]: Bacon, P. L., Schäfer, F., Gehring, C., Anandkumar, A., & Brunskill, E. A Lagrangian Method for Inverse Problems in Reinforcement Learning. In Advances in Neural Information Processing Systems.
