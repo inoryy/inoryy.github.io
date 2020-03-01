@@ -42,3 +42,5 @@ replicating DeepMind’s preliminary results and architecture with deep reinforc
 I continued my education with a master’s in computer science, filling in the blanks in the theory I missed beforehand.
 
 In the summer of 2019, I interned as a research engineer at DeepMind in London, UK; contributing to the [AlphaStar](https://deepmind.com/blog/article/AlphaStar-Grandmaster-level-in-StarCraft-II-using-multi-agent-reinforcement-learning) project, and experimenting with the [JAX](https://github.com/google/jax) library.
+
+In march of 2020 I joined DeepMind as a research engineer.
